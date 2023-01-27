@@ -8,13 +8,13 @@ function Search() {
   const [videoData, setVideoData] = useState({});
   const { addVideo } = useContext(VideoContext);
   const options = {
-    method: "GET",
-    url: "https://youtube-mp3-download1.p.rapidapi.com/dl",
-    params: { id: videoId },
+    method: 'GET',
+    url: 'https://youtube-mp3-download1.p.rapidapi.com/dl',
+    params: {id: videoId},
     headers: {
-      "X-RapidAPI-Key": "08a6d9fb77msh8cbcb59ff4a36afp1c6bdajsn23b46a6ee430",
-      "X-RapidAPI-Host": "youtube-mp3-download1.p.rapidapi.com",
-    },
+      'X-RapidAPI-Key': '08a6d9fb77msh8cbcb59ff4a36afp1c6bdajsn23b46a6ee430',
+      'X-RapidAPI-Host': 'youtube-mp3-download1.p.rapidapi.com'
+    }
   };
 
   const getYoutubeID = () => {
