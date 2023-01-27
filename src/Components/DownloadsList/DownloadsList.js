@@ -7,6 +7,7 @@ function DownloadsList() {
   const [isConverted, setIsConverted] = useState(false);
   const [videoTitle, setVideoTitle] = useState("");
   const [videoDuration, setVideoDuration] = useState("");
+  const [videoDownloadLink, setVideoDownloadLink] = useState("")
 
   function fmtMSS(s) {
     return (s - (s %= 60)) / 60 + (9 < s ? ":" : ":0") + s;
@@ -22,6 +23,7 @@ function DownloadsList() {
     const roundedDuration = Math.round(videoDownload.duration);
     const duration = fmtMSS(roundedDuration);
     setVideoTitle(videoDownload.title);
+    setVideoDownloadLink(videoDownload.link);
     setVideoDuration(duration);
     checkConverted();
   }, [videoDownload]);
@@ -29,7 +31,7 @@ function DownloadsList() {
   return (
     <div>
       {isConverted ? (
-        <VideoCard title={videoTitle} duration={videoDuration}></VideoCard>
+        <VideoCard title={videoTitle} duration={videoDuration} downloadLink = {videoDownloadLink}></VideoCard>
       ) : null}
     </div>
   );
