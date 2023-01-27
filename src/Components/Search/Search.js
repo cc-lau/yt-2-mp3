@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
+import VideoContext from "../../VideoContext";
 
 function Search() {
   const [videoId, setVideoId] = useState("");
   const [videoUrl, setVideoUrl] = useState("");
   const [videoData, setVideoData] = useState({});
+  const { addVideo } = useContext(VideoContext);
   const options = {
     method: "GET",
     url: "https://youtube-mp3-download1.p.rapidapi.com/dl",
@@ -42,6 +44,7 @@ function Search() {
   }, [videoUrl]);
 
   useEffect(() => {
+    addVideo(videoData);
     console.log(videoData);
   }, [videoData]);
 
