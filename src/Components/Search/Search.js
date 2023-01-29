@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import VideoContext from "../../VideoContext";
+import "./SearchStyles.css"
 
 function Search() {
   const [videoId, setVideoId] = useState("");
@@ -49,7 +50,7 @@ function Search() {
   }, [videoData]);
 
   return (
-    <div>
+    <div className="search-container">
       <input
         type="text"
         id="video-url"
@@ -57,7 +58,7 @@ function Search() {
         value={videoUrl}
         onChange={handleChange}
       ></input>
-      <button onClick={convertVideo}>Convert</button>
+      <button className="search-button" onClick={convertVideo}>Convert</button>
     </div>
   );
 }
