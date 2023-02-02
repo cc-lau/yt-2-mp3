@@ -1,0 +1,42 @@
+.video-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25px;
+    background-color: #fffcf2;
+    width: max-content;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+.video-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #403d39;
+}
+
+.video-duration {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #403d39;
+}
+
+.download-link {
+    padding: 10px;
+    color: #403d39;
+    font-weight: bold;
+    background-color: #ccc5b9;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    text-decoration:none; 
+    cursor: pointer;  
+}
+
+.download-link:hover {
+    color: #EB5E28;
+    background-color: #252422;
+}
