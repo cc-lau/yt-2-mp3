@@ -1,0 +1,9 @@
+.footer-container {
+    height: 50px;
+    margin-top: -50px;
+}
+
+.footer-text {
+    color: #403d39;
+    font-size: 1.25rem;
+}
