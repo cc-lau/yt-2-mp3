@@ -51,7 +51,10 @@ function Search() {
 
   return (
     <div className="search-container">
+      <span className="instruction-text">Enter Youtube Link Below</span>
+      <div className="input-container">
       <input
+        className="search-input"
         type="text"
         id="video-url"
         name="video-url"
@@ -59,6 +62,7 @@ function Search() {
         onChange={handleChange}
       ></input>
       <button className="search-button" onClick={convertVideo}>Convert</button>
+    </div>
     </div>
   );
 }
