@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useContext } from "react";
 import VideoContext from "../../VideoContext";
 import VideoCard from "./VideoCard";
+import "./DownloadListStyles.css";
 
 function DownloadsList() {
   const { videoDownload } = useContext(VideoContext);
   const [isConverted, setIsConverted] = useState(false);
   const [videoTitle, setVideoTitle] = useState("");
   const [videoDuration, setVideoDuration] = useState("");
-  const [videoDownloadLink, setVideoDownloadLink] = useState("")
+  const [videoDownloadLink, setVideoDownloadLink] = useState("");
 
   function fmtMSS(s) {
     return (s - (s %= 60)) / 60 + (9 < s ? ":" : ":0") + s;
@@ -31,7 +32,15 @@ function DownloadsList() {
   return (
     <div>
       {isConverted ? (
-        <VideoCard title={videoTitle} duration={videoDuration} downloadLink = {videoDownloadLink}></VideoCard>
+        <div className="video-download-container">
+          <div className="card-container">
+            <VideoCard
+              title={videoTitle}
+              duration={videoDuration}
+              downloadLink={videoDownloadLink}
+            ></VideoCard>
+          </div>
+        </div>
       ) : null}
     </div>
   );
