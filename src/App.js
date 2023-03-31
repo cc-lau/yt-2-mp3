@@ -11,11 +11,11 @@ function App() {
     <div className="App">
       <Header />
       <div className="content">
-      <VideoProvider>
-        <Search />
-        <DownloadsList />
-      </VideoProvider>
-      <ExampleDescription />
+        <VideoProvider>
+          <Search />
+          <DownloadsList />
+        </VideoProvider>
+        <ExampleDescription />
       </div>
       <Footer />
     </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import VideoContext from "../../VideoContext";
-import "./SearchStyles.css"
+import "./SearchStyles.css";
 
 function Search() {
   const [videoId, setVideoId] = useState("");
@@ -9,13 +9,13 @@ function Search() {
   const [videoData, setVideoData] = useState({});
   const { addVideo } = useContext(VideoContext);
   const options = {
-    method: 'GET',
-    url: 'https://youtube-mp3-download1.p.rapidapi.com/dl',
-    params: {id: videoId},
+    method: "GET",
+    url: "https://youtube-mp3-download1.p.rapidapi.com/dl",
+    params: { id: videoId },
     headers: {
-      'X-RapidAPI-Key': '08a6d9fb77msh8cbcb59ff4a36afp1c6bdajsn23b46a6ee430',
-      'X-RapidAPI-Host': 'youtube-mp3-download1.p.rapidapi.com'
-    }
+      "X-RapidAPI-Key": "08a6d9fb77msh8cbcb59ff4a36afp1c6bdajsn23b46a6ee430",
+      "X-RapidAPI-Host": "youtube-mp3-download1.p.rapidapi.com",
+    },
   };
 
   const getYoutubeID = () => {
@@ -46,23 +46,24 @@ function Search() {
 
   useEffect(() => {
     addVideo(videoData);
-    console.log(videoData);
   }, [videoData]);
 
   return (
     <div className="search-container">
       <span className="instruction-text">Enter Youtube Link Below</span>
       <div className="input-container">
-      <input
-        className="search-input"
-        type="text"
-        id="video-url"
-        name="video-url"
-        value={videoUrl}
-        onChange={handleChange}
-      ></input>
-      <button className="search-button" onClick={convertVideo}>Convert</button>
-    </div>
+        <input
+          className="search-input"
+          type="text"
+          id="video-url"
+          name="video-url"
+          value={videoUrl}
+          onChange={handleChange}
+        ></input>
+        <button className="search-button" onClick={convertVideo}>
+          Convert
+        </button>
+      </div>
     </div>
   );
 }

@@ -1,14 +1,15 @@
 .header-container {
-    display: flex;
-    flex-direction: row;
-    background-color: #ccc5b9;
-    padding: 20px 20px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-    padding-left: 10%;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffffc0;
+  padding: 20px 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  padding-left: 10%;
+  width: 100%;
 }
 .title {
-    color: #403d39;
-    font-size: 1.5rem;
-    font-weight: bold;
+  color: #ff0000;
+  font-size: 1.5rem;
+  font-weight: bold;
 }

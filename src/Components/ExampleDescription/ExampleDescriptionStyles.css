@@ -1,18 +1,25 @@
 .example-text-container {
-    padding-top: 45px;
-    width: 100%;
+  padding-top: 45px;
+  width: 100%;
 }
 
 .instructions {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    column-gap: 25px;
-    padding-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 25px;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 900px) {
+  .instructions {
+    flex-direction: column;
+    row-gap: 10px;
+  }
 }
 
 .instructions > p {
-    color: #403d39;
-    font-size: 2rem;
-    font-weight: bold;
+  color: #282828;
+  font-size: 2rem;
+  font-weight: bold;
 }

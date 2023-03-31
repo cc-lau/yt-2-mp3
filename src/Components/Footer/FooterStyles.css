@@ -1,9 +1,16 @@
 .footer-container {
-    height: 50px;
-    margin-top: -50px;
+  height: 50px;
+  margin-top: -50px;
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    padding-top: 50px;
+    margin-top: 0px;
+  }
 }
 
 .footer-text {
-    color: #403d39;
-    font-size: 1.25rem;
+  color: #282828;
+  font-size: 1.25rem;
 }
